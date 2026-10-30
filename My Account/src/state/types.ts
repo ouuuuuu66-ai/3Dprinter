@@ -3,8 +3,6 @@ export type UserProfile = {
   nickname: string
   avatarUrl: string | null
   avatarKey: string
-  verified: boolean
-  accountType: 'adult-verified'
   familyRole: 'super-admin'
 }
 

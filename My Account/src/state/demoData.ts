@@ -6,8 +6,6 @@ export const demoData: AppData = {
     nickname: 'ugee9284',
     avatarUrl: null,
     avatarKey: 'cat-purple',
-    verified: true,
-    accountType: 'adult-verified',
     familyRole: 'super-admin',
   },
   family: {

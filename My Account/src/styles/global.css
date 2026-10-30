@@ -32,18 +32,12 @@ button { border: 0; color: inherit; cursor: pointer; }
 .badge-button { position: relative; }
 .badge-button i { position: absolute; width: 18px; height: 18px; border-radius: 50%; right: 7px; top: 7px; background: #ff4d61; border: 4px solid #f2efff; }
 
-.profile-card { min-height: 226px; border-radius: 34px; background: linear-gradient(135deg, #fff, #f3efff); box-shadow: 0 14px 38px rgb(72 54 158 / 9%); padding: 28px; display: grid; grid-template-columns: 1fr 178px; gap: 24px; }
-.profile-main, .qr-entry { background: transparent; }
+.profile-card { min-height: 226px; border-radius: 34px; background: linear-gradient(135deg, #fff, #f3efff); box-shadow: 0 14px 38px rgb(72 54 158 / 9%); padding: 28px; display: grid; grid-template-columns: minmax(0, 1fr); }
+.profile-main { background: transparent; }
 .profile-main { display: flex; align-items: center; min-width: 0; text-align: left; padding: 0; }
-.profile-main > svg { width: 34px; flex: none; color: #aaa7b7; }
+.profile-main > svg { width: 34px; flex: none; color: #aaa7b7; margin-left: auto; }
 .profile-copy { min-width: 0; display: flex; flex-direction: column; gap: 8px; margin-left: 22px; }
 .profile-copy strong { font-size: 39px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.profile-copy small { display: flex; align-items: center; gap: 7px; color: #6554df; font-size: 22px; }
-.profile-copy small svg { width: 26px; fill: #7157ff; color: #fff; }
-.profile-copy em { color: var(--muted); font-size: 20px; font-style: normal; }
-.qr-entry { border-left: 1px solid #dfd9f8; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 13px; color: #4c446d; }
-.qr-entry svg { width: 74px; height: 74px; }
-.qr-entry span { font-size: 21px; }
 .avatar { background: linear-gradient(145deg, #dcd4ff, #fff0dc); color: #7663d3; display: grid; place-items: center; overflow: hidden; flex: none; }
 .avatar-large { width: 118px; height: 118px; border-radius: 50%; }
 .avatar-small { width: 72px; height: 72px; border-radius: 50%; }
@@ -134,16 +128,6 @@ button { border: 0; color: inherit; cursor: pointer; }
 .danger-button { background: #fff; color: #e34d59; display: flex; align-items: center; justify-content: center; gap: 12px; }
 .danger-text { display: block; background: transparent; color: #e34d59; margin: 24px auto; font-size: 22px; }
 
-.code-page { background: linear-gradient(180deg, #eeeaff, #f7f6fb 45%); }
-.code-card { background: #fff; border-radius: 34px; padding: 34px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 16px 40px rgb(70 50 150 / 10%); }
-.code-card h2 { font-size: 32px; margin: 17px 0 8px; }
-.code-card p { color: #6752dc; margin: 0; display: flex; gap: 6px; font-size: 20px; }
-.code-card p svg { width: 24px; }
-.code-card > small { color: var(--muted); margin-top: 7px; font-size: 19px; }
-.fake-qr { width: 390px; height: 390px; margin: 30px 0 18px; border: 16px solid #f4f2f8; background: repeating-conic-gradient(#29263a 0 25%, #fff 0 50%) 0 0 / 38px 38px; display: grid; place-items: center; }
-.fake-qr span { padding: 18px 24px; background: #fff; border-radius: 12px; font-size: 18px; color: #777386; }
-.code-card > strong { font-size: 42px; letter-spacing: 8px; }
-.code-card > em { font-style: normal; color: var(--muted); font-size: 19px; margin-top: 22px; }
 .code-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; width: 100%; margin-top: 24px; }
 .code-actions button { min-height: 76px; border-radius: 20px; background: #eeeaff; color: #654de0; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 22px; }
 .tip-card { background: #fff9e8; padding: 28px; border-radius: 24px; margin-top: 24px; }
@@ -196,9 +180,6 @@ button { border: 0; color: inherit; cursor: pointer; }
 .mine-content { padding: 8px 42px 170px !important; }
 .profile-card { min-height: 210px; border: 2px solid #e7ebfa; border-radius: 28px; box-shadow: 0 8px 22px #7c89b50d; background: #fff; }
 .profile-copy strong { font-size: 42px; color: #07144f; }
-.profile-copy small { background: #d9fbfb; padding: 9px 16px; border-radius: 999px; width: fit-content; color: #13aebd; font-size: 23px; }
-.profile-copy em { display: none; }
-.qr-entry { border: 0; color: #747da8; }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 20px; }
 .points-card, .family-card { margin: 0; height: 274px; border-radius: 24px; overflow: hidden; }
 .points-card { padding: 30px; align-items: stretch; background: linear-gradient(135deg, #5a3dff, #9758ff 64%, #347fff); }
@@ -327,28 +308,12 @@ button { border: 0; color: inherit; cursor: pointer; }
 .avatar-editor .avatar-large { width: 210px; height: 210px; }
 .avatar-editor .avatar-large span { font-size: 125px; }
 .avatar-editor i { width: 62px; height: 62px; top: 145px; }
-.avatar-editor > span { color: #16b356; background: #dff8e4; border-radius: 999px; padding: 10px 24px; }
 .account-list { margin-bottom: 24px; border-radius: 26px; overflow: hidden; }
 .account-logout { color: #07144f; }
 .account-delete { width: 100%; border: 2px solid #f22; border-radius: 999px; min-height: 82px; }
 .center { text-align: center; }
 .danger-confirm { width: 100%; }
 
-.association-profile { display: flex; align-items: center; gap: 34px; padding: 28px; border-radius: 28px; background: #fff; }
-.association-profile .avatar { width: 180px; height: 180px; }
-.association-profile .avatar span { font-size: 110px; }
-.association-profile h2 { font-size: 39px; margin: 0 0 8px; }
-.association-profile p { width: fit-content; margin: 0 0 8px; background: #dffbe6; color: #16b653; padding: 8px 18px; border-radius: 999px; }
-.association-profile small { color: #68749e; font-size: 22px; }
-.code-card { margin-top: 28px; }
-.fake-qr { width: 410px; height: 410px; background: repeating-conic-gradient(#000 0 25%, #fff 0 50%) 0 0 / 42px 42px; }
-.fake-qr span { color: #342f51; font-weight: 800; }
-.invite-row { width: 100%; min-height: 100px; display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 18px; border: 2px dashed #d8dcf1; border-radius: 22px; padding: 12px 22px; }
-.invite-row span { font-size: 24px; color: #6c759b; }
-.invite-row strong { font-size: 43px; letter-spacing: 10px; }
-.invite-row button, .refresh-code { border-radius: 999px; background: #eeeaff; color: #653aec; padding: 18px 25px; display: flex; align-items: center; gap: 9px; font-size: 21px; }
-.refresh-code { margin: 30px auto; }
-.code-card .tip-card { width: 100%; text-align: left; background: #f4f7fc; }
 
 .language-list { background: #fff; }
 .language-list button { width: 100%; min-height: 88px; padding: 0 28px; border-bottom: 1px solid #e8eaf2; background: #fff; display: flex; align-items: center; justify-content: space-between; color: #07144f; font-size: 27px; font-weight: 700; }

@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppPreview } from './components/layout/AppPreview'
 import { AccountPage } from './pages/AccountPage'
-import { AssociationCodePage } from './pages/AssociationCodePage'
 import { HomePlaceholderPage } from './pages/HomePlaceholderPage'
 import { MinePage } from './pages/MinePage'
 import { ModuleBoundaryPage } from './pages/ModuleBoundaryPage'
@@ -24,7 +23,6 @@ export function App() {
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/account" element={<AccountPage />} />
-        <Route path="/association-code" element={<AssociationCodePage />} />
         <Route path="/points" element={<ModuleBoundaryPage title="积分充值" description="充值接口尚未接入，本阶段仅保留模块入口与积分状态。" />} />
         <Route path="/family/*" element={<ModuleBoundaryPage title="家庭管理" description="复杂业务模块已建立路由边界，待后续设计图后逐页实现。" />} />
         <Route path="/models/prints" element={<PrintListPage />} />
